@@ -1,0 +1,177 @@
+/* Container and layout */
+.admin-dashboard {
+  max-width: 900px;
+  min-height: 100vh;
+  margin: 40px auto;
+  padding: 20px 30px;
+  background-color: #f9fafb;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Headings */
+.admin-dashboard h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #222;
+  border-bottom: 2px solid #4f46e5; /* Indigo underline */
+  padding-bottom: 8px;
+}
+
+.admin-dashboard h3 {
+  margin-top: 30px;
+  font-size: 1.6rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* Stats paragraph */
+.admin-dashboard p {
+  font-size: 1.1rem;
+  margin: 8px 0;
+  color: #555;
+}
+
+/* User management */
+/* Container for each user */
+.user-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  margin: 8px 0;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+   position: relative;
+}
+
+/* Username and status section */
+.user-info {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Visual indicator for blocked status */
+.user-status {
+  margin-left: 8px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #e0f3ff;
+  color: #0078d4;
+}
+.user-status.blocked {
+  background-color: #ffe6e6;
+  color: #d40000;
+}
+
+/* Button container */
+.user-actions {
+  display: flex;
+  gap: 10px;
+   z-index: 1;
+}
+
+/* Common button styles */
+.user-actions .block,
+.user-actions .activate {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+
+/* Block user button */
+.user-actions .block {
+  background-color: #d14124;
+  color: #fff;
+}
+.user-actions .block:hover {
+  background-color: #a72f1b;
+}
+
+/* Unblock user button */
+.user-actions .activate {
+  background-color: #28a745;
+  color: #fff;
+}
+.user-actions .activate:hover {
+  background-color: #1f7e34;
+}
+
+/* Button click “shrink” animation */
+.user-actions button:active {
+  transform: scale(0.98);
+}
+
+/* Dashboard header */
+
+/* Reports section */
+.report-item {
+  background-color: #fff;
+  border-left: 5px solid #4f46e5;
+  padding: 14px 18px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.report-item p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.report-item strong {
+  color: #1e40af; /* Indigo for usernames */
+}
+
+.report-item em {
+  color: #6b7280; /* Gray for reason */
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .user-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user-actions {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .user-actions button {
+    width: 48%;
+    margin: 4px 1%;
+    color: #333;
+  }
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logout-btn {
+  background-color: #e74c3c;
+  border: none;
+  padding: 8px 14px;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+
